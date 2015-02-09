@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  pubmed_id: MyString
+  journal: MyString
+  pages: MyString
+  date: MyString
+  type: 
+  link: MyString
+  authors: MyText
+  title: MyText
+  notes: MyString
+
+two:
+  pubmed_id: MyString
+  journal: MyString
+  pages: MyString
+  date: MyString
+  type: 
+  link: MyString
+  authors: MyText
+  title: MyText
+  notes: MyString

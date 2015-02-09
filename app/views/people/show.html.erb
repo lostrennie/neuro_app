@@ -1,0 +1,31 @@
+<h1><%= @person.prefix %> <%= @person.fname %> <%= @person.lname %></h1>
+<h2><%= @person.title %></h2>
+
+<dl>
+	<dt>Position</dt>
+	<dd><%= @person.position %></dd>
+
+	<dt>School</dt>
+	<dd><%= @person.school %></dd>
+
+	<dt>Location</dt>
+	<dd><%= @person.building %> <%= @person.office %></dd>
+	<dd><%= @person.phone %></dd>
+
+	<dt>Lead(s)</dt>
+	<dd><%= @person.boss %><%= @person.pi1 %></dd>
+	<dd><%= @person.pi2 %></dd>
+
+	<dt>Interest</dt>
+	<dd><%= @person.interest %></dd>
+
+	<dt>Current Reseach</dt>
+	<dd><%= @person.research %></dd>
+
+	<dt>Publications</dt>
+	<dd><%=  %></dd>
+</dl>
+
+<div>
+	<%= link_to "Show All", people_path %>
+</div>

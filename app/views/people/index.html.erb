@@ -1,0 +1,37 @@
+<h1>Directory</h1>
+
+<div>
+	<%= link_to "Create a new entry", new_person_path %>
+</div>
+
+<table class="people table-striped">
+	
+	<tbody>
+		<% @people.each do |person| %>
+		  <tr class="people_row">
+		  	<td class="portrait">INSERT</td>
+		  	<td class="names">
+		  		<div class="inner">
+		  			<p><%= person.fname %> <%= person.lname %></p>
+		  			<p><%= person.position %><%= person.title %></p>
+		  			<p>boss</p>
+		  		</div>
+		  	</td>
+		  	<td class="stats">
+		  		<div class="inner">
+		  			<p><%= person.school %></p>
+		  			<p><%= person.building %> <%= person.office %></p>
+		  			<p><%= person.phone %></p>
+		  		</div>
+		  	</td>
+		  	<td class="mail">
+		  		<div class="inner">
+		  			<%= person.user_name %>@neuro.fsu.edu
+		  		</div>
+		  	</td>
+		  </tr>
+		<% end %>
+	</tbody>
+</table>
+
+

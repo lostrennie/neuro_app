@@ -1,0 +1,28 @@
+<h1>List of Departmental Articles</h1>
+
+<div>
+	<%= link_to "Create a new entry", new_article_path %>
+</div>
+
+<table>
+	<thead>
+		<tr>
+			<td>Date</td>
+			<td>Journal</td>
+			<td>Authors</td>
+			<td>Title</td>
+			<td>Pages</td>
+		</tr>
+	</thead>
+	<tbody>
+		<% @articles.each do |article| %>
+		  <tr>
+		  	<td><%= article.date %></td>
+		  	<td><%= article.journal %></td>
+		  	<td><%= article.authors %></td>
+		  	<td><%= article.title %></td>
+		  	<td><%= article.pages %></td>
+		  </tr>
+		<% end %>
+	</tbody>
+</table>
