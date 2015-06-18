@@ -1,7 +1,14 @@
 <h1>Directory</h1>
 
-<div>
-	<%= link_to "Create a new entry", new_person_path %>
+<div class="filter_div">
+	<div class="filter btn btn-default btn-directory active"><%= link_to "New entry", new_person_path %></div>
+	<div class="filter btn btn-default btn-directory active"><%= link_to "Full Listing", people_path %></div>
+	<div class="filter btn btn-default btn-directory active"><%= link_to "Faculty", people_path(:filter_by => :faculty), {:method => :get} %></div>
+	<div class="filter btn btn-default btn-directory active"><%= link_to "Postdocs", people_path(:filter_by => :postdoc), {:method => :get} %></div>
+	<div class="filter btn btn-default btn-directory active"><%= link_to "Grad Students", people_path(:filter_by => :grad), {:method => :get} %></div>
+	<div class="filter btn btn-default btn-directory active"><%= link_to "Affiliates", people_path(:filter_by => :affiliates), {:method => :get} %></div>
+	<div class="filter btn btn-default btn-directory active"><%= link_to "Staff", people_path(:filter_by => :staff), {:method => :get} %></div>
+
 </div>
 
 <table class="people table-striped">
@@ -12,7 +19,9 @@
 		  	<td class="portrait">INSERT</td>
 		  	<td class="names">
 		  		<div class="inner">
-		  			<p><%= person.fname %> <%= person.lname %></p>
+		  			<p><%= link_to(person) do %>
+  						<strong><%= person.fname %> <%= person.lname %></strong>
+					<% end %></p>
 		  			<p><%= person.position %><%= person.title %></p>
 		  			<p>boss</p>
 		  		</div>

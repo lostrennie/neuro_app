@@ -1,6 +1,12 @@
 class PeopleController < ApplicationController
 	def index
 		@people = Person.all
+
+		if params[:filter_by]
+    		@people = Person.where(:position => params[:filter_by])
+  		else
+    		@people = Person.all
+  		end
 	end
 
 	def show

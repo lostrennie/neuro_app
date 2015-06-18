@@ -5,23 +5,21 @@
 </div>
 
 <table>
-	<thead>
-		<tr>
-			<td>Date</td>
-			<td>Journal</td>
-			<td>Authors</td>
-			<td>Title</td>
-			<td>Pages</td>
-		</tr>
-	</thead>
 	<tbody>
 		<% @articles.each do |article| %>
 		  <tr>
-		  	<td><%= article.date %></td>
-		  	<td><%= article.journal %></td>
-		  	<td><%= article.authors %></td>
-		  	<td><%= article.title %></td>
-		  	<td><%= article.pages %></td>
+		  	<div><td><p><%= link_to(article) do %>
+  						<strong><%= article.title %></strong>
+					<% end %></p></td></div>
+		  	<div>
+		  		<td><%= article.authors %></td>
+		  	</div>
+		  	<div>
+		  		<td><%= article.journal %></td>
+		  		<td><%= article.pages %></td>
+		  		<td><%= article.date %></td>
+		  		<td><%= article.pubmed_id %></td>
+		  	</div>
 		  </tr>
 		<% end %>
 	</tbody>

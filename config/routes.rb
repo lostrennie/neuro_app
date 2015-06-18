@@ -1,4 +1,10 @@
 Neurosci::Application.routes.draw do
+  get "prospect_pages/about"
+  get "prospect_pages/admission"
+  get "prospect_pages/finaid"
+  get "prospect_pages/curriculum"
+  get "prospect_pages/prospecthub"
+  get "prospect_pages/faq"
   root to: 'homes#show'
   resources :people
   resources :articles

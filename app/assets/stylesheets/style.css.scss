@@ -2,6 +2,7 @@
   body {
     margin: 0;
     font-size: 14px;
+    font-family: "Roboto",sans-serif;
   }
 
   /* Header CSS */
@@ -77,16 +78,19 @@
 
   .carosel {
     float: left;
+    padding-left: 33px;
 
   }
 
   .gradapp {
     float: right;
+    padding-right: 33px;
   }
 
   .outreach {
     float: right;
     margin-top: 12px;
+    padding-right: 33px;
   }
 
   /* Content Wrapper in Application.html.erb */
@@ -96,6 +100,15 @@
   }
 
   /* People */
+
+  .filter_div {
+    padding-bottom: 5px;
+  }
+
+  .filter {
+    border-radius: 8px;
+    padding: 3px 10px;
+  }
 
   .people {
     width: 100%
@@ -107,6 +120,7 @@
 
   .people td p {
     margin-bottom: 5px;
+    line-height: 1.2;
   }
 
 

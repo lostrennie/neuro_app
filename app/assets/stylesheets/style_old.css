@@ -80,18 +80,15 @@
 
   .carosel {
     float: left;
-    margin-left: 33px;
   }
 
   .gradapp {
     float: right;
-    margin-right: 33px;
   }
 
   .outreach {
     float: right;
     margin-top: 12px;
-    margin-right: 33px;
   }
 
   /* Content Wrapper in Application.html.erb */
