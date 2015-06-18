@@ -1,4 +1,12 @@
 Neurosci::Application.routes.draw do
+  get "event_pages/calendar"
+  get "event_pages/rushton"
+  get "event_pages/outreach"
+  get "event_pages/smith"
+  get "event_pages/social"
+  get "event_pages/colloquium"
+  get "event_pages/eventhub"
+
   get "about_pages/abouthub"
   get "about_pages/history"
   get "about_pages/affliates"
