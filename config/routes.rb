@@ -1,10 +1,24 @@
 Neurosci::Application.routes.draw do
+  get "students_pages/studenthub"
+  get "students_pages/tribeta"
+  get "students_pages/nusa"
+  get "students_pages/ngsa"
+  get "students_pages/nsresources"
+  get "students_pages/outreach"
+  get "students_pages/bee"
+  get "students_pages/awareness"
+  get "students_pages/fair"
+  get "students_pages/constitution"
+  get "students_pages/bylaws"
+  get "students_pages/gsac"
+
   get "prospect_pages/about"
   get "prospect_pages/admission"
   get "prospect_pages/finaid"
   get "prospect_pages/curriculum"
   get "prospect_pages/prospecthub"
   get "prospect_pages/faq"
+  
   root to: 'homes#show'
   resources :people
   resources :articles
