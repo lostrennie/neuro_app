@@ -1,4 +1,9 @@
 Neurosci::Application.routes.draw do
+  get "about_pages/abouthub"
+  get "about_pages/history"
+  get "about_pages/affliates"
+  get "about_pages/focus"
+  
   get "students_pages/studenthub"
   get "students_pages/tribeta"
   get "students_pages/nusa"
