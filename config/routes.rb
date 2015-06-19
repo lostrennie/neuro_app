@@ -1,4 +1,10 @@
 Neurosci::Application.routes.draw do
+  get "resource_pages/resourcehub"
+  get "resource_pages/resresource"
+  get "resource_pages/links"
+  get "resource_pages/articles"
+  get "resource_pages/cores"
+  
   get "event_pages/calendar"
   get "event_pages/rushton"
   get "event_pages/outreach"
