@@ -22,7 +22,7 @@
    		<h2><%= @person.prefix %> <%= @person.fname %> <%= @person.lname %></h2>
 		<h4><%= @person.title %></h4>
 		<dl>
-			<dd><%= @person.position.capitalize %></dd>
+			<dd><%= @person.position.try(:capitalize) %></dd>
 			<dd><%= @person.school %></dd>
 			<dd><%= @person.building %> <%= @person.office %></dd>
 			<dd><%= @person.phone %></dd>
@@ -54,32 +54,36 @@
 		  				<%= link_to 'Edit', edit_person_path(@person) %>
 				</dd>
 
-				
+
 			</dl>
 
   		</div>
 
   		<div class="col-sm-6">
   			<!--Lab Links and people go here. -->
+          <h2>Subordinates of <%= @person.fname %></h2>
+          <% @subordinates.each do |subordinate|%>
+              <dl>
+                <dt>Name: <%= subordinate.fname %> </dt>
+                <dt>Position: <%= subordinate.position %></dt>
+                <dt>School: <%= subordinate.school %></dt>
+                <dt>Location</dt>
+                <dd><%= subordinate.building %> <%= subordinate.office %></dd>
+                <dd><%= subordinate.phone %></dd>
+                <dt>Lead(s): <%= subordinate.boss %></dt>
+                <dd><%= subordinate.pi1 %></dd>
+                <dd><%= subordinate.pi2 %></dd>
+                <dt>Interest: <%= subordinate.interest %></dt>
+                <dt>Current Reseach: <%= subordinate.research %></dt>
+                <dt>Publications</dt>
+                <dd><%=  %></dd>
+              </dl>
+          <% end %>
   		</div>
-
   </div>
 
 </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<div>
+  <%= link_to "Show All", people_path %>
+</div>
