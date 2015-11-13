@@ -15,8 +15,8 @@ class PeopleController < ApplicationController
 	end
 
 	def show
-		@person = Person.find(params[:id])
-		
+    @person = Person.find_by_user_name(params[:id])
+    @subordinates = Person.where('lower(boss) = ?', @person.user_name.downcase) # get all the subordinates for this @person
 	end
 
 	def new
@@ -53,9 +53,6 @@ class PeopleController < ApplicationController
 		person.destroy
 		redirect_to people_path
 	end
-
-
-
 
 	private
 	def person_params
