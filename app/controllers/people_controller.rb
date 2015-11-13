@@ -1,4 +1,9 @@
 class PeopleController < ApplicationController
+
+	def show_details
+		@person = Person.find_by(user_name: params[:user_name])
+	end
+
 	def index
 		@people = Person.all
 
@@ -11,6 +16,7 @@ class PeopleController < ApplicationController
 
 	def show
 		@person = Person.find(params[:id])
+		
 	end
 
 	def new
@@ -56,7 +62,7 @@ class PeopleController < ApplicationController
 		params.require(:person).permit(
 			:fname, :lname, :user_name, :auth_id, :school, :building, 
 			:office, :phone, :p1, :p2, :boss, :interest, :research,
-			:position, :title, :prefix)
+			:position, :title, :prefix, :thumbnail, :banner, :focus1, :focus2, :focus3)
 	end
 
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>FSU Program of Neuroscience</title>
+  <title>FSU Program of Neuroscience | <%= yield(:title) %></title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
@@ -10,7 +10,7 @@
 <%= render 'layouts/header' %>
 <div class="container">
 	<div class="page-header">
-		
+		<a href="/"> </a>
 	</div>
 
 	<nav class="navbar navbar-default" role="navigation">
@@ -27,10 +27,10 @@
 			<ul class="nav navbar-nav">
 				<li><%= link_to 'Prospective Students', '/prospect_pages/prospecthub' %></li>
 				<li><%= link_to 'Current Students', '/students_pages/studenthub' %></li>
-				<li><%= link_to 'People', people_path %></li>
+				<li><%= link_to 'People', '#' %></li>
 				<li><%= link_to 'About', '/about_pages/abouthub' %></li>
 				<li><%= link_to 'Resources', '/resource_pages/resourcehub' %></li>
-				<li><%= link_to 'Events', '/event_pages/eventhub' %></li>
+				<li><%= link_to 'Events', '/episode_pages/eventhub' %></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				

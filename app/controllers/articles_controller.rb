@@ -49,6 +49,6 @@ class ArticlesController < ApplicationController
 	def article_params
 		params.require(:article).permit(
 			:pubmed_id, :journal, :pages, :date, :type, :link, :authors,
-			:title, :notes)
+			:title, :notes, :auth_id)
 	end
 end

@@ -20,5 +20,9 @@ module Neurosci
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
     config.serve_static_assets = true
+
+    Dir.glob("#{Rails.root}/app/assets/images/**/").each do |path|
+        config.assets.paths << path
+    end
   end
 end

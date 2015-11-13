@@ -1,4 +1,5 @@
 <%= form_for(article) do |f| %>
+
 	<fieldset>
 		<%= f.label :pubmed_id %>
 		<%= f.text_field :pubmed_id %>
@@ -12,6 +13,11 @@
 	<fieldset>
 		<%= f.label :title %>
 		<%= f.text_field :title %>
+	</fieldset>
+
+	<fieldset>
+		<%= f.label :auth_id %>
+		<%= f.text_area :auth_id %>
 	</fieldset>
 
 	<fieldset>

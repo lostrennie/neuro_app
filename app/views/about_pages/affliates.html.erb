@@ -1,10 +1,23 @@
-<h1>Affliated Departments and Programs</h1>
-<p></p>
+<% provide(:title, "Affilates") %>
 
-Department of Biological Science
-Department of Biomedical Sciences, FSUCollege of Medicine 
-Department of Mathematics
-Department of Psychology
+<div class="row">
+	<div id="hub_text" class="col-sm-12">
+		<h1 class="hub_para">Affliated Departments and Programs</h1>
+	</div>
 
-Center for Brain Repair
-Chemical Senses Training Grant
+	<div id="hub_left" class="col-sm-6 clearfix">
+		<ul>
+			<li><%= link_to 'Biological Science', 'http://www.bio.fsu.edu/', :class => 'aff_bio_link' %></li>
+			<li><%= link_to 'Biomedical Sciences', 'http://www.med.fsu.edu/?page=biomedicalSciences.home', :class => 'aff_med_link' %></li>
+			<li><%= link_to 'Mathematics', 'http://www.math.fsu.edu/', :class => 'aff_math_link' %></li>
+		</ul>
+	</div>
+	<div id="hub_right" class="col-sm-6 clearfix">
+		<ul>
+			<li><%= link_to 'Psychology', 'http://www.psy.fsu.edu/', :class => 'aff_psych_link' %></li>
+			<li><%= link_to 'Molecular Bio', 'http://www.sb.fsu.edu/', :class => 'aff_molbi_link' %></li>
+			<li><%= link_to 'MagLab', 'http://www.magnet.fsu.edu/', :class => 'aff_mag_link' %></li>
+			
+		</ul>
+	</div>
+</div>

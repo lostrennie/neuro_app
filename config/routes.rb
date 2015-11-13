@@ -1,4 +1,12 @@
 Neurosci::Application.routes.draw do
+
+  get "episode_pages/eventhub"
+  get "episode_pages/rushton"
+  get "episode_pages/outreach"
+  get "episode_pages/smith"
+  get "episode_pages/social"
+  get "episode_pages/colloquium"
+
   get "resource_pages/resourcehub"
   get "resource_pages/resresource"
   get "resource_pages/links"
@@ -37,12 +45,30 @@ Neurosci::Application.routes.draw do
   get "prospect_pages/curriculum"
   get "prospect_pages/prospecthub"
   get "prospect_pages/faq"
+
+  #get 'people/:id/user_name' => 'people#user_name', as: :user_name
   
   root to: 'homes#show'
-  resources :people
-  resources :articles
-  
+  resources :people do
+    
+    member do
+      get '/people/*user_name', to: 'people#show_details'
+    end
 
+    resources :pubs, except: [:create, :new, :edit, :destroy]
+
+  end
+  resources :articles
+  resources :pubs
+
+
+  namespace :sekret do
+    resources :people do
+      resources :pubs
+    end
+  end
+
+  get ':postion/:user_name' => "people#show"
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150210222349) do
+ActiveRecord::Schema.define(version: 20150902170546) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 20150210222349) do
     t.string   "notes"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "auth_id"
   end
 
   create_table "people", force: true do |t|
@@ -56,6 +57,35 @@ ActiveRecord::Schema.define(version: 20150210222349) do
     t.string   "position"
     t.string   "title"
     t.string   "prefix"
+    t.string   "thumbnail_file_name"
+    t.string   "thumbnail_content_type"
+    t.integer  "thumbnail_file_size"
+    t.datetime "thumbnail_updated_at"
+    t.string   "banner_file_name"
+    t.string   "banner_content_type"
+    t.integer  "banner_file_size"
+    t.datetime "banner_updated_at"
+    t.string   "focus1"
+    t.string   "focus2"
+    t.string   "focus3"
   end
+
+  create_table "pubs", force: true do |t|
+    t.integer  "person_id"
+    t.string   "pubmed_id"
+    t.string   "journal"
+    t.string   "title"
+    t.string   "auth_id"
+    t.string   "authors"
+    t.string   "pages"
+    t.string   "date"
+    t.string   "type"
+    t.string   "link"
+    t.string   "notes"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "pubs", ["person_id"], name: "index_pubs_on_person_id", using: :btree
 
 end

@@ -1,82 +1,95 @@
-<h1>Department of Biological Sciences Cores</h1>
-<p>Find me in app/views/resource_pages/cores.html.erb</p>
+<% provide(:title, "Cores") %>
+
+<div class="hub_wrap">
+	<div id="hub_text">
+		<h1>Department of Biological Sciences Cores</h1>
 
 
-Analytical Facilities
-Services include various HPLC analyses.  There is also preparative equipment and gel quantification equipment.
-http://www.bio.fsu.edu/analytical.php
+		<h3><%= link_to "Analytical Facilities", 'http://www.bio.fsu.edu/analytical.php' %></h3>
+		<p>Services include various HPLC analyses.  There is also preparative equipment and gel quantification equipment.</p>
+		
 
-DNA sequencing Facility
-The facility offers sequencing services onApplied Biosystems 3730 Genetic Analyzer and Next-generation sequencing with Illumina MiSeq.
-http://www.bio.fsu.edu/dna_sequencing.php
+		<h3><%= link_to "DNA sequencing Facility", 'http://www.bio.fsu.edu/dna_sequencing.php' %></h3>
+		<p>The facility offers sequencing services onApplied Biosystems 3730 Genetic Analyzer and Next-generation sequencing with Illumina MiSeq.</p>
+		
 
-Hybridoma Core Facility
-This facility offers expertise and assistance in monoclonal antibody production.
-http://www.bio.fsu.edu/hybridoma.php
+		<h3><%= link_to "Hybridoma Core Facility", 'http://www.bio.fsu.edu/hybridoma.php' %></h3>
+		<p>This facility offers expertise and assistance in monoclonal antibody production.</p>
 
-Molecular Cloning Facility
-This facility provides assistance in the design and implementation of molecular biology techniques
-http://www.bio.fsu.edu/mol_cloning.php
 
-Institute of Molecular Biophysics
-Protein Expression Facility
-This core facilitates the large scale expression of recombinant progestin in eukaryotic cells.  They have a WAVE bioreactor and a BelloCell bioreactor.
+		<h3><%= link_to "Molecular Cloning Facility", 'http://www.bio.fsu.edu/mol_cloning.php' %></h3>
+		<p>This facility provides assistance in the design and implementation of molecular biology techniques.</p>
 
-http://biophysics.fsu.edu/facilities/protein-expression-facility/
 
-College of Medicine
-Translational Science Core
-This core houses several instruments for proteomic and nucleic acid analyses:
-LTQ
-MALDI-TOF
-Off-Gel Fractionator
-BioAnalyzer
-Synapt G2 HDMS
-Orbitrap
-Xevo TQS
-Illumina HiSeq 2500
-
-http://med.fsu.edu/?page=translationalLab.home
-
-Department of Psychology Cores
-
-Histology/Molecular Laboratories
-
-The major equipment that this Core houses includes:
-Cryostat
-Microtome
-Vibratome
-Ultra-microtome
-Nanodrop
-Biorad thermal cycler
-Scintillation counter
-Gamma counter
-Fluorescence and Stereo investigator equipped microscope
-Lase Capture Microdissection
-X-ray film processor.
-
-https://psy.fsu.edu/facilities/labs.htm
-
-Electronic Shop
-Will help produce specialized equipment for experiments
-https://psy.fsu.edu/facilities/elec.shop.htm#elec
-
-Instrument/Machine Shop
-Will assist in the fabrication of equipment
-https://psy.fsu.edu/facilities/instrument.shop.htm#inst
-
-Graphics Office
-Will provide assistance in the prepration of illustrations and printed materials
-https://psy.fsu.edu/facilities/graphics_ofc.htm#graphics
+		<h3><%= link_to "Institute of Molecular Biophysics
+			Protein Expression Facility", 'http://biophysics.fsu.edu/facilities/protein-expression-facility/' %></h3>
+		<p>This core facilitates the large scale expression of recombinant progestin in eukaryotic cells.  They have a WAVE bioreactor and a BelloCell bioreactor.</p>
 
 
 
-Center for Genomics and Personalized Medicine
-Will provide assistance in genomic-scale data analyses, experimental design and implementation.
-http://genomics.fsu.edu/
+		<h2>College of Medicine Cores</h2>
+
+		<h3><%= link_to "Translational Science Core", 'http://med.fsu.edu/?page=translationalLab.home' %></h3>
+		<p>This core houses several instruments for proteomic and nucleic acid analyses:
+			<ul>
+				<li>LTQ</li>
+				<li>MALDI-TOF</li>
+				<li>Off-Gel Fractionator</li>
+				<li>BioAnalyzer</li>
+				<li>Synapt G2 HDMS</li>
+				<li>Orbitrap</li>
+				<li>Xevo TQS</li>
+				<li>Illumina HiSeq 2500.</li>
+			</ul>
+		</p>
+
+
+
+		<h2>Department of Psychology Cores</h2>
+
+		<h3><%= link_to "Histology/Molecular Laboratories", 'https://psy.fsu.edu/facilities/labs.htm' %></h3>
+
+		<p>The major equipment that this Core houses includes:
+			<ul>
+				<li>Cryostat</li>
+				<li>Microtome</li>
+				<li>Vibratome</li>
+				<li>Ultra-microtome</li>
+				<li>Nanodrop</li>
+				<li>Biorad thermal cycler</li>
+				<li>Scintillation counter</li>
+				<li>Gamma counter</li>
+				<li>Fluorescence and Stereo investigator equipped microscope</li>
+				<li>Lase Capture Microdissection</li>
+				<li>X-ray film processor.</li>
+			</ul>
+		</p>
+
+
+
+		<h3><%= link_to "Electronic Shop", 'https://psy.fsu.edu/facilities/elec.shop.htm#elec' %></h3>
+		<p>Will help produce specialized equipment for experiments.</p>
+
+
+		<h3><%= link_to "Instrument/Machine Shop", 'https://psy.fsu.edu/facilities/instrument.shop.htm#inst' %></h3>
+		<p>Will assist in the fabrication of equipment.</p>
+
+
+		<h3><%= link_to "Graphics Office", 'https://psy.fsu.edu/facilities/graphics_ofc.htm#graphics' %></h3> 
+		<p>*****as per department******
+		Will provide assistance in the prepration of illustrations and printed materials.</p>
+
+
+
+
+		<h3><%= link_to "Center for Genomics and Personalized Medicine", 'http://genomics.fsu.edu/' %></h3>
+		<p>Will provide assistance in genomic-scale data analyses, experimental design and implementation.</p>
+
 
 Shared Equipment:
 
 This is our current page where it is all listed.  
 
 http://www.neuro.fsu.edu/equipment/
+
+</div>
